@@ -1,0 +1,23 @@
+	jquery 获取尺寸
+width（）
+height（）
+innerWidth();
+innerHeight();
+outerWidth();
+outerHeight();
+outerWidth(true);
+offset().left
+offset().top
+position().left
+position().top
+scrollTop
+scrollLeft
+toggleClass();
+hasClass();s
+
+
+窗口宽度：$(window).width() 
+	  $(windwo).height()
+文档的高度$("body").height();
+浏览器滚动的距离 $(window).scrollTop;
+元素离文档最上面距离 $(elem).position().top
