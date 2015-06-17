@@ -28,3 +28,7 @@ clone（true）
 删除：
 remove（）
 empty（）
+插入内部：
+append（）
+prepend()
+
