@@ -21,3 +21,10 @@ hasClass();s
 文档的高度$("body").height();
 浏览器滚动的距离 $(window).scrollTop;
 元素离文档最上面距离 $(elem).position().top
+--------------------dom 元素操作
+克隆：
+clone（）
+clone（true）
+删除：
+remove（）
+empty（）
