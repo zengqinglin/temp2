@@ -31,4 +31,9 @@ empty（）
 插入内部：
 append（）
 prepend()
+prependTo()
+appendTo()
+插入外部：
+after（）
+before（）
 
