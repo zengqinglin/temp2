@@ -36,4 +36,6 @@ appendTo()
 插入外部：
 after（）
 before（）
+insertAfter（）
+insertBefore（）
 
