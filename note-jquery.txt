@@ -35,7 +35,7 @@ prependTo()
 appendTo()
 插入外部：
 after（）
-before（）
+//这个地方这样写
 insertAfter（）
 insertBefore（）
 
