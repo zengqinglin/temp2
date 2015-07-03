@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+
+  
+    <title> Full Width Slider | RoyalSlider</title>
+  
+
+    <meta content="Touch-enabled image gallery and content slider plugin, that focuses on providing great user experience on every desktop and mobile device." name="description">
+    <meta name="keywords" content="content slider, gallery, plugin, jquery, banner rotator">
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0" />
+    <meta name="author" content="Dmitry Semenov">
+
+    
+    <link href="royalslider.css" rel="stylesheet">
+    <script src="jquery-1.8.3.min.js"></script>
+  <script src="jquery.royalslider.min.js"></script>
+      
+    
+
+    
+   <!-- <link href="reset.css" rel="stylesheet">-->
+    
+    
+      <link href="rs-minimal-white.css" rel="stylesheet"/>
+     
+    
+
+    
+    <style>
+	
+	
+	
+	
+      #full-width-slider {
+  width: 100%;
+  color: #000;
+}
+#full-width-slider * {
+   -webkit-backface-visibility: inherit;
+}
+/*.coloredBlock {
+  padding: 12px;
+  background: rgba(255,0,0,0.6);
+  color: #FFF;
+   width: 200px;
+   left: 20%;
+   top: 5%;
+}
+.infoBlock {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  left: auto;
+  max-width: 25%;
+  padding-bottom: 0;
+  background: #FFF;
+  background: rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  padding: 20px;
+}
+.infoBlockLeftBlack {
+  color: #FFF;
+  background: #000;
+  background: rgba(0,0,0,0.75);
+  left: 30px;
+  right: auto;
+}
+.infoBlock h4 {
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0;
+  padding-bottom: 3px;
+}
+.infoBlock p {
+  font-size: 14px;
+  margin: 4px 0 0;
+}
+.infoBlock a {
+  color: #FFF;
+  text-decoration: underline;
+}
+.photosBy {
+  position: absolute;
+  line-height: 24px;
+  font-size: 12px;
+  background: #FFF;
+  color: #000;
+  padding: 0px 10px;
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  top: auto;
+  border-radius: 2px;
+  z-index: 25; 
+} */
+.photosBy a {
+  color: #000;
+}
+.fullWidth {
+  max-width: 100%;
+  margin: 0 auto 24px;
+}
+
+@media screen and (min-width:960px) and (min-height:660px) {
+  .heroSlider .rsOverflow,
+  .royalSlider.heroSlider {
+      height: 520px !important;
+  }
+}
+
+@media screen and (min-width:960px) and (min-height:1000px) {
+    .heroSlider .rsOverflow,
+    .royalSlider.heroSlider {
+        height: 660px !important;
+    }
+}
+@media screen and (min-width: 0px) and (max-width: 800px) {
+  .royalSlider.heroSlider,
+  .royalSlider.heroSlider .rsOverflow {
+    height: 300px !important;
+  }
+  .infoBlock {
+    padding: 10px;
+    height: auto;
+    max-height: 100%;
+    min-width: 40%;
+    left: 5px;
+    top: 5px;
+    right: auto;
+    font-size: 12px;
+  }
+  .infoBlock h3 {
+     font-size: 14px;
+     line-height: 17px;
+  }
+}
+
+    </style>
+    
+  </head>
+  <body >
+  
+  <div class="sliderContainer fullWidth clearfix">
+<div id="full-width-slider" class="royalSlider heroSlider rsMinW">
+  <div class="rsContent">
+    <img class="rsImg" src="1.jpg" alt="" />
+    <!--<div class="infoBlock infoBlockLeftBlack rsABlock" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+      <h4>This is an animated block, add any number of them to any type of slide</h4>
+      <p>Put completely anything inside - text, images, inputs, links, buttons.</p>
+    </div>-->
+  </div>
+  <div class="rsContent">
+    <img class="rsImg" src="2.jpg" alt="" />
+    <!-- <div class="infoBlock  rsAbsoluteEl" style="color:#000;" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+      <h4>This is a static HTML block</h4>
+      <p>It's always displayed and not animated by slider.</p>
+    </div>-->
+  </div>
+ <div class="rsContent">
+    <img class="rsImg" src="3.jpg" alt="" />
+   <!-- <div class="infoBlock rsABlock infoBlockLeftBlack" data-fade-effect="" data-move-offset="10" data-move-effect="bottom" data-speed="200">
+      <h4>You can link to this slide by adding #3 to url.</h4>
+      <p><a href="http://dimsemenov.com/plugins/royal-slider/gallery-with-deeplinking/">Learn more</a></p>
+    </div>-->
+  </div>
+  <div class="rsContent">
+    <img class="rsImg" src="4.jpg" alt="" />
+   <!-- <span class="photosBy rsAbsoluteEl" data-fade-effect="fa;se" data-move-offset="40" data-move-effect="bottom" data-speed="200">Photos by <a href="http://www.flickr.com/photos/gilderic/">Gilderic</a></span>-->
+  </div>
+</div>
+  </div>
+
+  
+    <script>
+      jQuery(document).ready(function($) {
+  $('#full-width-slider').royalSlider({
+    arrowsNav: true,
+    loop: true,
+    keyboardNavEnabled: true,
+    controlsInside: false,
+    imageScaleMode: 'fill',
+    arrowsNavAutoHide: false,
+    autoScaleSlider: true, 
+    autoScaleSliderWidth: 1920,     
+    autoScaleSliderHeight: 600,
+    controlNavigation: 'bullets',
+    thumbsFitInViewport: false,
+    navigateByClick: true,
+    startSlideId: 0,
+    autoPlay: true,
+    transitionType:'move',
+    globalCaption: true,
+    deeplinking: {
+      enabled: true,
+      change: false
+    },
+	autoPlay: {
+				// autoplay options go gere
+				enabled: true,
+				stopAtAction: false,
+				pauseOnHover: false,
+				delay: 3000
+			},
+    /* size of all images http://help.dimsemenov.com/kb/royalslider-jquery-plugin-faq/adding-width-and-height-properties-to-images */
+    imgWidth: 1400,
+    imgHeight: 680
+  });
+});
+/*
+参数名	参数说明	可选值	默认值
+autoScaleSlider	是否基于基础宽度自动更新滑块高度	true或false	false
+autoScaleSliderWidth	幻灯片基本宽度	整数	800
+autoScaleSliderHeight	幻灯片基本高度	整数	400
+imageScaleMode	图片缩放模式	“fill”, “fit”, “fit-if-smaller” 或 “none”	‘fit-if-smaller’
+imageAlignCenter	幻灯片是否居中对齐	true或false	true
+imageScalePadding	图片和幻灯片边缘的距离，在’fill’缩放模式下不起作用	数字	4
+controlNavigation	导航类型	‘bullets’, ‘thumbnails’, ‘tabs’ 或 ‘none’	‘bullets’
+arrowsNav	是否用箭头导航	true或false	true
+arrowsNavAutoHide	箭头导航是否自动隐藏	true或false	true
+arrowsNavHideOnTouch	箭头导航是否在触摸设备中隐藏	true或false	false
+imgWidth	所有图片的基本宽度	整数	null
+imgHeight	所有图片的基本高度	整数	null
+slidesSpacing	幻灯片之间的间隔，单位px	整数	8
+startSlideId	从第几张幻灯片开始播放	整数	0
+loop	是否从最后一张幻灯片滑动到第一张	true或false	false
+loopRewind	是否从最后一张幻灯片通过环绕的方式滑动到第一张，重写loop参数	true或false	false
+randomizeSlides	是否随机一张幻灯片开始播放	true或false	false
+numImagesToPreload	幻灯片预加载的图片数量，如果设置为0，那么开始将只有一张图片显示在列表中	整数	4
+usePreloader	Enables spinning preloader, you may style it via CSS (class rsPreloader). Since 9.3 version.	true或false	true
+slidesOrientation	滑动方向	‘vertical’ 或 ‘horizontal’	‘horizontal’
+transitionType	切换过渡类型	‘move’ 或 ‘fade’	‘move	‘
+transitionSpeed	切换毫秒速度	整数	600
+navigateByClick	是否允许在幻灯片上点击鼠标导航	true或false	true
+sliderDrag	是否允许在幻灯片上鼠标拖动导航	true或false	true
+sliderTouch	是否允许触摸导航	rue或false	true
+keyboardNavEnabled	是否允许键盘按键控制导航	true或false	false
+fadeinLoadedSlide	Fades in slide after it’s loaded.	true或false	true
+allowCSS3	是否允许css3效果的使用	true或false	true
+globalCaption	Adds global caption element to slide	true或false	true
+addActiveClass	是否在切换之前将rsActiveSlide应用到当前幻灯片的样式上	true或false	false
+minSlideOffset	拖拽时的最小偏移量	数字	10
+autoHeight	缩放和动画基本高度	 false
+slides	重写html幻灯片，用于创建未附加到DOM的的元素	 null
+*/
+    </script>
+  
+
+  
+   
+      
+
+  </body>
+</html>
